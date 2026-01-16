@@ -1,4 +1,3 @@
 package com.desafiomoura.sistema_integrado_moura.dto;
 
-public class LoginRequest {
-}
+public record LoginRequest(String email, String password) {}
