@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;           // <--- Import Importante
+import lombok.EqualsAndHashCode;  // <--- Import Importante
 import java.util.List;
 
 @Data
@@ -26,6 +28,8 @@ public class Employee {
     private String password;
 
     @JsonIgnore
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     private List<WorkRecord> workRecords;
 }
