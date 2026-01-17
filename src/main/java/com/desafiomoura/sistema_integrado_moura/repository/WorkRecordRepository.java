@@ -16,8 +16,6 @@ public interface WorkRecordRepository extends JpaRepository<WorkRecord, Long> {
 
     Optional<WorkRecord> findFirstByEmployeeIdAndCheckoutTimeIsNull(Long employeeId);
 
-    // --- CORREÇÃO FINAL: REMOVEMOS TODOS OS "IS NULL" ---
-    // O banco só vai comparar se é maior ou menor, simples e direto.
     @Query("SELECT w FROM WorkRecord w WHERE " +
             "(LOWER(w.employee.name) LIKE :name) AND " +
             "(w.checkinTime >= :startDate) AND " +

@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;           // <--- Import Importante
-import lombok.EqualsAndHashCode;  // <--- Import Importante
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
 import java.util.List;
 
 @Data

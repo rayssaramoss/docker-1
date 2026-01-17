@@ -54,7 +54,6 @@ public class WorkService {
         return workRecordRepository.findAll();
     }
 
-    // --- LÓGICA BLINDADA ---
     public Page<WorkRecord> findAll(Pageable pageable, String name, String dateStr) {
         LocalDateTime startOfDay = null;
         LocalDateTime endOfDay = null;
@@ -65,18 +64,14 @@ public class WorkService {
                 startOfDay = date.atStartOfDay();
                 endOfDay = date.atTime(23, 59, 59);
             } catch (Exception e) {
-                // Ignora data inválida
             }
         }
 
-        // Se o nome for nulo, usamos "%" (coringa do SQL que pega tudo).
-        // Isso impede que o banco reclame de tipo desconhecido (bytea).
         String nameFilter = "%";
         if (name != null && !name.trim().isEmpty()) {
             nameFilter = "%" + name.toLowerCase() + "%";
         }
 
-        // Chama o método NOVO com nome NOVO
         return workRecordRepository.buscarPontosComFiltro(nameFilter, startOfDay, endOfDay, pageable);
     }
 }
