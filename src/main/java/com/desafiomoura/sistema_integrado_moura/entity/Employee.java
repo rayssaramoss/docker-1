@@ -1,5 +1,6 @@
 package com.desafiomoura.sistema_integrado_moura.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +25,7 @@ public class Employee {
 
     private String password;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     private List<WorkRecord> workRecords;
 }
