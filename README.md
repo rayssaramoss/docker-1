@@ -1,219 +1,247 @@
-# 🕐 Sistema de Ponto Eletrônico | Desafio Moura Tech
-
-> Projeto desenvolvido como parte do processo seletivo do **Moura Tech**
-
-[![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.1-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
----
-
-## 📋 Sobre o Projeto
-
-Sistema completo de **registro de ponto eletrônico** que permite que funcionários marquem entrada/saída e gestores visualizem relatórios detalhados com filtros avançados.
-
-### ✨ Destaques Técnicos
-
-- 🎯 **Arquitetura em Camadas** (Controller → Service → Repository)
-- 🔐 **Sistema de Autenticação** com controle de acesso baseado em roles
-- ⏱️ **Contador em Tempo Real** com precisão de segundos
-- 📊 **Paginação e Filtros Dinâmicos** no painel administrativo
-- 📚 **Documentação Interativa** com Swagger/OpenAPI
-- 🎨 **Interface Moderna** com design responsivo
+<div align="center">
+  
+  # 📋 Sistema de Ponto Eletrônico
+  ### Desafio MouraTech 2026
+  
+  ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.1-brightgreen?style=for-the-badge&logo=spring)
+  ![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react)
+  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-336791?style=for-the-badge&logo=postgresql)
+  ![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk)
+  
+  **Sistema completo de registro de ponto eletrônico com interface moderna e API REST robusta**
+</div>
 
 ---
 
-## 🚀 Funcionalidades
+## 📑 Índice
 
-### 👤 Para Funcionários
-- ✅ Login seguro com email e senha
-- ✅ Registro de entrada (check-in) com validação de ponto aberto
-- ✅ Contador em tempo real mostrando tempo trabalhado (hh:mm:ss)
-- ✅ Registro de saída (check-out) com cálculo automático de duração
-- ✅ Visualização do resumo do dia (entrada, saída e total trabalhado)
-- ✅ Persistência de ponto aberto (se fechar o navegador e voltar, continua contando)
-
-### 👨‍💼 Para Gestores
-- ✅ Painel administrativo com listagem completa de registros
-- ✅ Filtro por **nome do funcionário** (busca parcial)
-- ✅ Filtro por **data específica** (formato yyyy-MM-dd)
-- ✅ Paginação otimizada para grandes volumes de dados
-- ✅ Visualização de pontos em aberto
-- ✅ Cálculo automático de horas trabalhadas
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Tecnologias](#-tecnologias)
+- [Arquitetura](#-arquitetura)
+- [Funcionalidades](#-funcionalidades)
+- [Instalação](#-instalação)
+- [Uso](#-uso)
+- [API Endpoints](#-api-endpoints)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Banco de Dados](#-banco-de-dados)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🎯 Sobre o Projeto
 
-### Backend
-- **Java 17** - Linguagem de programação
-- **Spring Boot 4.x** - Framework principal
-- **Spring Data JPA** - Persistência de dados
-- **PostgreSQL 16** - Banco de dados relacional
-- **Lombok** - Redução de boilerplate
-- **SpringDoc OpenAPI** - Documentação automática (Swagger)
-- **Maven** - Gerenciamento de dependências
+Sistema desenvolvido para o **Desafio 01 do MouraTech**, permitindo que funcionários registrem seus horários de trabalho (check-in/check-out) e gestores visualizem relatórios completos com filtros avançados.
 
-### Frontend
-- **React 18** - Biblioteca JavaScript
-- **Vite** - Build tool e dev server
-- **React Router v7** - Navegação entre páginas
-- **Axios** - Cliente HTTP
-- **Tailwind CSS** - Estilização
-- **Lucide React** - Ícones modernos
+### ✨ Diferenciais
+
+- **Interface moderna** com Tailwind CSS e design system Moura
+- **Autenticação por perfil** (Admin e Usuário)
+- **Dashboard administrativo** com filtros e paginação
+- **Modo desenvolvimento** com dados mockados
+- **Responsivo** para desktop e mobile
+- **Documentação Swagger** completa da API
+- **Performance otimizada** com paginação server-side
 
 ---
 
-## 📐 Arquitetura do Projeto
+## 🛠 Tecnologias
 
-### Backend (Estrutura de Pacotes)
+### **Frontend**
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
+[![React Router](https://img.shields.io/badge/React_Router-7.1.1-CA4245?style=flat&logo=react-router)](https://reactrouter.com/)
+[![Axios](https://img.shields.io/badge/Axios-1.7.9-5A29E4?style=flat&logo=axios)](https://axios-http.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-06B6D4?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![Lucide React](https://img.shields.io/badge/Lucide_React-0.468.0-F56565?style=flat)](https://lucide.dev/)
+
+### **Backend**
+
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.1-6DB33F?style=flat&logo=spring-boot)](https://spring.io/projects/spring-boot)
+[![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-Latest-6DB33F?style=flat&logo=spring)](https://spring.io/projects/spring-data-jpa)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-336791?style=flat&logo=postgresql)](https://www.postgresql.org/)
+[![Maven](https://img.shields.io/badge/Maven-3.8+-C71A36?style=flat&logo=apache-maven)](https://maven.apache.org/)
+[![Lombok](https://img.shields.io/badge/Lombok-Latest-BC4521?style=flat)](https://projectlombok.org/)
+[![Swagger](https://img.shields.io/badge/Swagger-OpenAPI_3.0-85EA2D?style=flat&logo=swagger)](https://swagger.io/)
+
+### **Ferramentas**
+
+[![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)
+[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellij-idea)](https://www.jetbrains.com/idea/)
+[![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code)](https://code.visualstudio.com/)
+
+---
+
+## 🏗 Arquitetura
+
+### **Frontend (SPA - Single Page Application)**
+
 ```
-sistema_integrado_moura/
-├── config/          # Configurações (Swagger, DataInitializer)
-├── controller/      # Endpoints REST
-│   ├── AuthController.java
-│   └── WorkController.java
-├── service/         # Lógica de negócio
-│   ├── AuthService.java
-│   └── WorkService.java
-├── repository/      # Acesso a dados (JPA)
-│   ├── EmployeeRepository.java
-│   └── WorkRecordRepository.java
-├── entity/          # Entidades do banco
-│   ├── Employee.java
-│   ├── WorkRecord.java
-│   └── UserRole.java
-└── dto/             # Objetos de transferência
-    ├── LoginRequest.java
-    ├── LoginResponse.java
-    └── WorkRecordDTO.java
+React Application
+├── Rotas Protegidas (PrivateRoute)
+├── Context API (AuthContext)
+└── Componentes Reutilizáveis
 ```
 
-### Frontend (Estrutura de Pastas)
+### **Backend (Arquitetura em Camadas)**
+
 ```
-src/
-├── api/             # Configuração do Axios
-├── components/      # Componentes reutilizáveis
-│   ├── button.jsx
-│   ├── card.jsx
-│   └── Navbar.jsx
-├── contexts/        # Context API (AuthContext)
-├── pages/           # Páginas da aplicação
-│   ├── App.jsx
-│   ├── Login.jsx
-│   ├── Ponto.jsx
-│   └── Admin.jsx
-└── index.css        # Estilos globais (Tailwind)
+┌─────────────────────────────────────┐
+│         Controller Layer            │
+│  (REST Endpoints + Validation)      │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│          Service Layer              │
+│    (Business Logic + Rules)         │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│        Repository Layer             │
+│     (Data Access + Queries)         │
+└─────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────┐
+│      PostgreSQL Database            │
+└─────────────────────────────────────┘
 ```
 
 ---
 
-## 🔧 Configuração e Instalação
+## 🎯 Funcionalidades
 
-### Pré-requisitos
-- ☕ **Java 17+** ([Download](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html))
-- 🐘 **PostgreSQL 12+** ([Download](https://www.postgresql.org/download/))
-- 📦 **Node.js 18+** ([Download](https://nodejs.org/))
-- 🔨 **Maven 3.8+** (geralmente vem com IDEs)
+### 👤 **Funcionário (USER)**
+
+- ✅ Login com credenciais
+- ✅ Registro de entrada (check-in)
+- ✅ Registro de saída (check-out)
+- ✅ Visualização do tempo trabalhado
+- ✅ Validação de ponto duplicado
+
+### 👨‍💼 **Gestor (ADMIN)**
+
+- ✅ Todas as funcionalidades de funcionário
+- ✅ Dashboard com lista completa de registros
+- ✅ Filtro por nome de funcionário
+- ✅ Filtro por data específica
+- ✅ Paginação de resultados
+- ✅ Visualização de duração total trabalhada
 
 ---
 
-### 🗄️ Passo 1: Configurar o Banco de Dados
+## 💻 Instalação
 
-Abra o terminal do PostgreSQL e execute:
+### **Pré-requisitos**
+
+Antes de começar, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) 18+
+- [Java JDK](https://www.oracle.com/java/technologies/downloads/) 17+
+- [PostgreSQL](https://www.postgresql.org/download/) 14+
+- [Maven](https://maven.apache.org/download.cgi) 3.8+
+- [Git](https://git-scm.com/)
+
+### **1. Clone o repositório**
+
+```bash
+git clone https://github.com/seu-usuario/sistema-ponto-moura.git
+cd sistema-ponto-moura
+```
+
+### **2. Configure o Banco de Dados**
 
 ```sql
+-- Acesse o PostgreSQL
+psql -U postgres
+
+-- Crie o banco de dados
 CREATE DATABASE moura_db;
+
+-- Saia do psql
+\q
 ```
 
----
+Edite o arquivo `src/main/resources/application.properties`:
 
-### ⚙️ Passo 2: Configurar o Backend
+```properties
+# Configurações do Banco de Dados
+spring.datasource.url=jdbc:postgresql://localhost:5432/moura_db
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
 
-1. **Clone o repositório**
-   ```bash
-   git clone <seu-repo>
-   cd sistema-ponto-moura/backend
-   ```
+# JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 
-2. **Configure o `application.properties`**
+# Server Port
+server.port=8080
+```
 
-   Abra `src/main/resources/application.properties` e ajuste:
+### **3. Execute o Backend**
 
-   ```properties
-   spring.application.name=sistema-integrado-moura
+```bash
+# Na raiz do projeto
+mvn clean install
+mvn spring-boot:run
+```
 
-   # Database
-   spring.datasource.url=jdbc:postgresql://localhost:5432/moura_db
-   spring.datasource.username=seu_usuario_postgres
-   spring.datasource.password=sua_senha_postgres
+✅ Backend rodando em: **http://localhost:8080**
 
-   # JPA
-   spring.jpa.hibernate.ddl-auto=update
-   spring.jpa.show-sql=true
-   spring.jpa.properties.hibernate.format_sql=true
+📚 Swagger UI disponível em: **http://localhost:8080/swagger-ui.html**
 
-   # Server
-   server.port=8080
+### **4. Execute o Frontend**
 
-   # Swagger
-   springdoc.api-docs.path=/api-docs
-   springdoc.swagger-ui.path=/swagger-ui.html
-   ```
+```bash
+# Entre na pasta frontend
+cd frontend
 
-3. **Rode o backend**
-   ```bash
-   mvn clean install
-   mvn spring-boot:run
-   ```
+# Instale as dependências
+npm install
 
-4. **Verifique se funcionou**
-   - Backend: http://localhost:8080
-   - Swagger: http://localhost:8080/swagger-ui.html
+# Execute o projeto
+npm run dev
+```
 
----
-
-### 🎨 Passo 3: Configurar o Frontend
-
-1. **Navegue até a pasta do frontend**
-   ```bash
-   cd ../frontend
-   ```
-
-2. **Instale as dependências**
-   ```bash
-   npm install
-   ```
-
-3. **Rode o frontend**
-   ```bash
-   npm run dev
-   ```
-
-4. **Acesse a aplicação**
-   - Frontend: http://localhost:5173
+✅ Frontend rodando em: **http://localhost:5173**
 
 ---
 
-## 👥 Usuários de Teste
+## 🚀 Uso
 
-O sistema cria automaticamente dois usuários ao iniciar:
+### **Usuários Pré-cadastrados**
 
-| Email | Senha | Tipo | Acesso |
-|-------|-------|------|--------|
-| `admin@moura.com` | `123` | ADMIN | Painel administrativo + Ponto |
-| `funcionario@moura.com` | `123` | USER | Apenas registro de ponto |
+O sistema cria automaticamente dois usuários para teste:
+
+| Perfil | Email | Senha | Permissões |
+|--------|-------|-------|------------|
+| 👨‍💼 **Administrador** | `admin@moura.com` | `123` | Acesso total ao sistema |
+| 👤 **Funcionário** | `funcionario@moura.com` | `123` | Registro de ponto |
+
+### **Fluxo do Funcionário**
+
+1. Acesse http://localhost:5173
+2. Faça login com `funcionario@moura.com` / `123`
+3. Clique em **Check-in** para registrar entrada
+4. Após trabalhar, clique em **Check-out**
+5. Visualize o resumo do dia com horários e duração
+
+### **Fluxo do Gestor**
+
+1. Acesse http://localhost:5173
+2. Faça login com `admin@moura.com` / `123`
+3. Visualize o dashboard administrativo
+4. Filtre registros por nome ou data
+5. Navegue pela paginação para ver histórico completo
 
 ---
 
-## 📡 Documentação da API
+## 📡 API Endpoints
 
-### 🔐 Autenticação
+### **Autenticação**
 
 #### `POST /auth/login`
-Realiza login e retorna token + informações do usuário
+
+Realiza login e retorna informações do usuário.
 
 **Request:**
 ```json
@@ -235,63 +263,57 @@ Realiza login e retorna token + informações do usuário
 
 ---
 
-### ⏱️ Registro de Ponto
+### **Ponto Eletrônico**
 
 #### `POST /work/checkin?employeeId={id}`
-Registra a entrada do funcionário
+
+Registra entrada do funcionário.
 
 **Response:**
 ```json
 {
   "id": 1,
-  "employee": { "id": 2, "name": "João Silva", ... },
-  "checkinTime": "2026-01-17T08:00:00",
+  "employee": {
+    "id": 1,
+    "name": "João Silva",
+    "email": "funcionario@moura.com",
+    "role": "USER"
+  },
+  "checkinTime": "2026-01-19T08:00:00",
   "checkoutTime": null,
   "duration": null
 }
 ```
 
-**Regras:**
-- ❌ Não permite check-in se já houver ponto aberto
-- ✅ Registra horário atual automaticamente
-
----
-
 #### `POST /work/checkout?employeeId={id}`
-Registra a saída do funcionário e calcula duração
+
+Registra saída do funcionário.
 
 **Response:**
 ```json
 {
   "id": 1,
-  "employee": { ... },
-  "checkinTime": "2026-01-17T08:00:00",
-  "checkoutTime": "2026-01-17T17:30:00",
-  "duration": 570
+  "employee": {
+    "id": 1,
+    "name": "João Silva",
+    "email": "funcionario@moura.com",
+    "role": "USER"
+  },
+  "checkinTime": "2026-01-19T08:00:00",
+  "checkoutTime": "2026-01-19T17:00:00",
+  "duration": 540
 }
 ```
 
-**Regras:**
-- ❌ Só funciona se houver check-in aberto
-- ✅ Calcula duração em minutos automaticamente
+#### `GET /work/list?page={page}&size={size}&name={nome}&date={data}`
 
----
+Lista registros de ponto com filtros e paginação.
 
-#### `GET /work/list`
-Lista registros com paginação e filtros
-
-**Query Parameters:**
-| Parâmetro | Tipo | Obrigatório | Default | Descrição |
-|-----------|------|-------------|---------|-----------|
-| `page` | int | Não | 0 | Número da página |
-| `size` | int | Não | 10 | Itens por página |
-| `name` | string | Não | - | Filtro por nome (busca parcial) |
-| `date` | string | Não | - | Filtro por data (yyyy-MM-dd) |
-
-**Exemplo:**
-```
-GET /work/list?page=0&size=10&name=João&date=2026-01-17
-```
+**Parâmetros:**
+- `page`: Número da página (default: 0)
+- `size`: Itens por página (default: 10)
+- `name`: Nome do funcionário (opcional)
+- `date`: Data no formato YYYY-MM-DD (opcional)
 
 **Response:**
 ```json
@@ -299,120 +321,278 @@ GET /work/list?page=0&size=10&name=João&date=2026-01-17
   "content": [
     {
       "id": 1,
-      "employee": { "name": "João Silva" },
-      "checkinTime": "2026-01-17T08:00:00",
-      "checkoutTime": "2026-01-17T17:30:00",
-      "duration": 570
+      "employee": {
+        "id": 1,
+        "name": "João Silva",
+        "email": "funcionario@moura.com",
+        "role": "USER"
+      },
+      "checkinTime": "2026-01-19T08:00:00",
+      "checkoutTime": "2026-01-19T17:00:00",
+      "duration": 540
     }
   ],
-  "totalElements": 1,
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 10
+  },
   "totalPages": 1,
-  "size": 10,
-  "number": 0
+  "totalElements": 1
 }
 ```
 
 ---
 
-## 🧪 Testando o Sistema
+## 📁 Estrutura do Projeto
 
-### Fluxo Completo de Teste
-
-1. **Login como Funcionário**
-   - Acesse http://localhost:5173
-   - Login: `funcionario@moura.com` / `123`
-   - Você será redirecionado para `/ponto`
-
-2. **Registrar Ponto**
-   - Clique em **"Check-in"**
-   - Observe o contador em tempo real (hh:mm:ss)
-   - Aguarde alguns segundos/minutos
-   - Clique em **"Check-out"**
-   - Veja o resumo com total trabalhado
-
-3. **Visualizar como Gestor**
-   - Saia e faça login com `admin@moura.com` / `123`
-   - Você será redirecionado para `/admin`
-   - Veja o registro na tabela com duração calculada
-   - Teste os filtros por nome e data
+```
+sistema-ponto-moura/
+│
+├── .idea/                                    # Configurações IntelliJ IDEA
+│
+├── frontend/                                 # Aplicação React
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── api.js                       # Configuração Axios
+│   │   ├── components/
+│   │   │   ├── button.jsx                   # Componente Button
+│   │   │   ├── card.jsx                     # Componente Card
+│   │   │   └── Navbar.jsx                   # Componente Navbar
+│   │   ├── contexts/
+│   │   │   └── AuthContext.jsx              # Context de Autenticação
+│   │   ├── pages/
+│   │   │   ├── Admin.jsx                    # Página Admin
+│   │   │   ├── App.jsx                      # Rotas da Aplicação
+│   │   │   ├── login_temp.jsx               # Página de Login
+│   │   │   └── Ponto.jsx                    # Página de Ponto
+│   │   ├── index.css                        # Estilos globais
+│   │   └── main.jsx                         # Entry point
+│   ├── package.json                         # Dependências Node
+│   └── vite.config.js                       # Configuração Vite
+│
+├── src/main/java/com/desafiomoura/sistema_integrado_moura/
+│   ├── config/
+│   │   ├── DataInitializer.java             # Seed de usuários
+│   │   ├── DataLoader.java                  # Configuração inicial
+│   │   └── OpenApiConfig.java               # Configuração Swagger
+│   ├── controller/
+│   │   ├── AuthController.java              # Endpoints de autenticação
+│   │   └── WorkController.java              # Endpoints de ponto
+│   ├── dto/
+│   │   ├── LoginRequest.java                # DTO de login
+│   │   ├── LoginResponse.java               # DTO de resposta
+│   │   └── WorkRecordDTO.java               # DTO de registro
+│   ├── entity/
+│   │   ├── Employee.java                    # Entidade Funcionário
+│   │   ├── UserRole.java                    # Enum de perfis
+│   │   └── WorkRecord.java                  # Entidade Registro
+│   ├── repository/
+│   │   ├── EmployeeRepository.java          # Repositório de funcionários
+│   │   └── WorkRecordRepository.java        # Repositório de registros
+│   ├── service/
+│   │   ├── AuthService.java                 # Lógica de autenticação
+│   │   └── WorkService.java                 # Lógica de ponto
+│   └── Main.java                            # Classe principal
+│
+├── src/main/resources/
+│   └── application.properties               # Configurações Spring
+│
+├── target/                                   # Build artifacts (Maven)
+├── HELP.md                                   # Guia Spring Boot
+├── README.md                                 # Este arquivo
+└── pom.xml                                   # Dependências Maven
+```
 
 ---
 
-## 🎯 Diferenciais Implementados
+## 🗄 Banco de Dados
 
-### ⚡ Performance
-- Paginação otimizada para grandes volumes
-- Queries JPA com índices adequados
-- Caching de configurações
+### **Modelo ER**
 
-### 🔒 Segurança
-- Validação de dados em todos os endpoints
-- Proteção contra check-ins duplicados
-- Rotas protegidas no frontend (PrivateRoute, AdminRoute)
+```
+┌─────────────────────┐         ┌─────────────────────┐
+│     EMPLOYEES       │         │    WORK_RECORDS     │
+├─────────────────────┤         ├─────────────────────┤
+│ id (PK)            │◄────────│ id (PK)            │
+│ name               │         │ employee_id (FK)   │
+│ email (UNIQUE)     │         │ checkin_time       │
+│ password           │         │ checkout_time      │
+│ role               │         │ duration           │
+└─────────────────────┘         └─────────────────────┘
+```
 
-### 🎨 UX/UI
-- Design responsivo (mobile-first)
-- Feedback visual em todas as ações
-- Estados de loading
-- Mensagens de erro claras
-- Contador em tempo real com precisão de segundos
+### **Tabelas**
 
-### 📊 Dados
-- Persistência completa no PostgreSQL
-- Recuperação de ponto aberto ao retornar
-- Filtros combinados (nome + data)
-- Ordenação por data decrescente
+#### `employees`
+```sql
+CREATE TABLE employees (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
+```
+
+#### `work_records`
+```sql
+CREATE TABLE work_records (
+    id BIGSERIAL PRIMARY KEY,
+    employee_id BIGINT NOT NULL,
+    checkin_time TIMESTAMP NOT NULL,
+    checkout_time TIMESTAMP,
+    duration BIGINT,
+    CONSTRAINT fk_employee FOREIGN KEY (employee_id) 
+        REFERENCES employees(id) ON DELETE CASCADE
+);
+```
+
+---
+
+## 🛡 Regras de Negócio
+
+### **Validações Implementadas**
+
+1. **Check-in duplicado**
+   - Não permite novo check-in se já existe um ponto aberto (sem check-out)
+   
+2. **Check-out sem check-in**
+   - Valida existência de check-in antes de permitir check-out
+   
+3. **Cálculo automático de duração**
+   - Calcula minutos trabalhados automaticamente no check-out
+   - Fórmula: `duration = (checkout_time - checkin_time) em minutos`
+
+4. **Autenticação por perfil**
+   - Rotas protegidas validam token e perfil do usuário
+   - ADMIN tem acesso ao dashboard, USER apenas ao ponto
+
+5. **Filtros de data**
+   - Aceita formato ISO (YYYY-MM-DD)
+   - Filtra início do dia (00:00) até fim do dia (23:59:59)
+
+---
+
+## 🎨 Design System
+
+### **Paleta de Cores Moura**
+
+| Cor | Hex | Uso |
+|-----|-----|-----|
+| 🔵 Moura Blue | `#003366` | Cor primária, backgrounds |
+| 🟠 Moura Orange | `#F2A933` | Botões, destaques |
+| ⚪ White | `#FFFFFF` | Cards, textos principais |
+| ⚫ Gray 800 | `#1F2937` | Textos secundários |
+| ⚫ Gray 400 | `#9CA3AF` | Labels, placeholders |
+
+### **Componentes**
+
+- **Card**: Container branco com sombra e bordas arredondadas
+- **Button**: Botão laranja com hover effect e ícones Lucide
+- **Navbar**: Header fixo com logo Moura e logout
+
+---
+
+## 🔄 Modo Desenvolvimento
+
+O frontend possui um **modo dev** que funciona offline sem backend:
+
+```javascript
+// frontend/src/contexts/AuthContext.jsx
+const DEV_MODE = true; // Altere para false para usar backend real
+```
+
+**Quando DEV_MODE = true:**
+- ✅ Login usa usuários mockados
+- ✅ Check-in/checkout geram timestamps locais
+- ✅ Lista de registros exibe dados de exemplo
+- ✅ Ideal para desenvolvimento do frontend sem backend rodando
+
+---
+
+## 🧪 Testes
+
+### **Cenário 1: Registro de Ponto Completo**
+
+1. Login como funcionário
+2. Fazer check-in → Verificar timestamp exibido
+3. Aguardar alguns minutos
+4. Fazer check-out → Verificar cálculo de duração
+5. Conferir dados salvos no banco
+
+### **Cenário 2: Validação de Ponto Duplicado**
+
+1. Login como funcionário
+2. Fazer check-in
+3. Tentar fazer check-in novamente → Deve retornar erro
+4. Fazer check-out
+5. Tentar fazer check-out novamente → Deve retornar erro
+
+### **Cenário 3: Dashboard Administrativo**
+
+1. Login como admin
+2. Visualizar lista de todos os registros
+3. Filtrar por nome de funcionário
+4. Filtrar por data específica
+5. Navegar entre páginas
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Backend não inicia
-**Erro:** `Connection refused to PostgreSQL`
+### **Erro: Backend não conecta ao PostgreSQL**
 
-**Solução:**
-1. Verifique se o PostgreSQL está rodando
-2. Confirme usuário/senha no `application.properties`
-3. Teste a conexão: `psql -U postgres -d moura_db`
+```bash
+# Verifique se o PostgreSQL está rodando
+sudo service postgresql status
+
+# Ou no Windows
+pg_ctl status
+
+# Teste a conexão
+psql -U seu_usuario -d moura_db
+```
+
+### **Erro: Frontend não encontra a API**
+
+Verifique o arquivo `frontend/src/api/api.js`:
+```javascript
+const api = axios.create({
+  baseURL: "http://localhost:8080", // Porta correta?
+});
+```
+
+### **Erro: CORS Policy**
+
+O backend já está configurado com:
+```java
+@CrossOrigin(origins = "*")
+```
+
+Para produção, altere para domínios específicos:
+```java
+@CrossOrigin(origins = "https://seudominio.com")
+```
+
+### **Erro: Maven build failed**
+
+```bash
+# Limpe o cache Maven
+mvn clean
+
+# Force update das dependências
+mvn clean install -U
+```
 
 ---
 
-### Filtros não funcionam
-**Causa:** Frontend em modo DEV
 
-**Solução:**
-1. Abra `src/contexts/AuthContext.jsx`
-2. Mude `DEV_MODE = false`
-3. Reinicie o frontend
-
----
-
-### CORS Error
-**Erro:** `Access-Control-Allow-Origin`
-
-**Solução:**
-- Verifique se `@CrossOrigin(origins = "*")` está nos controllers
-- Confirme que backend está em http://localhost:8080
-
----
-
-## 📚 Documentação Adicional
-
-- **Swagger UI:** http://localhost:8080/swagger-ui.html
-- **API Docs JSON:** http://localhost:8080/api-docs
+</div>
 
 ---
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido exclusivamente como parte do processo seletivo da **Moura Tech** e segue os requisitos do Desafio 01.
+Este projeto foi desenvolvido como parte do **Desafio MouraTech 2026** do Grupo Moura.
 
 ---
-
-<div align="center">
-
-### 🔋 Feito com dedicação para a Moura Tech
-
-**Sistema de Ponto Eletrônico | 2026**
-
-</div>
