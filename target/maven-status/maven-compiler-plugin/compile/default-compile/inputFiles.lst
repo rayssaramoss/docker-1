@@ -1,0 +1,15 @@
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/Main.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/config/DataInitializer.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/config/OpenApiConfig.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/controller/AuthController.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/controller/WorkController.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/dto/LoginRequest.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/dto/LoginResponse.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/dto/WorkRecordDTO.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/entity/Employee.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/entity/UserRole.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/entity/WorkRecord.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/repository/EmployeeRepository.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/repository/WorkRecordRepository.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/service/AuthService.java
+/home/abner/Desafio-1---Registro-De-Ponto/src/main/java/com/desafiomoura/sistema_integrado_moura/service/WorkService.java
